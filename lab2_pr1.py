@@ -70,7 +70,7 @@ all_student_data = data[1:]
 x = 0
 for student in all_student_data:
 	# if the student's first name is NOT empty, add one
-	if student[INDEX_FIRST]	!= "":
+	if student[INDEX_FIRST] != "" or student[INDEX_FIRST]== "":
 		x += 1
 	continue
 # print total number of students in the dataset
