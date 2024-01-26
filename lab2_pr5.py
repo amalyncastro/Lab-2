@@ -26,7 +26,7 @@ Idea is similar to tea, for "coffee" or "espresso" or "brew" or "mocha"
 
 # created a helper function
 def coffee(beverage):
-    lowercase = beverage.lower()             
+    beverage = beverage.lower()             
     return "coffee" in beverage or "mocha" in beverage or "brew" in beverage or "espresso" in beverage
 
 # -- Write your code here ---
