@@ -34,7 +34,7 @@ lst = []
 for student in all_student_data:
     # if coffee contains student's favorite beverage lowercased, append their first name, last name, and favorite beverage.
     if coffee(student[INDEX_BEVERAGE].lower()):
-        lst.append(print(f"{student[INDEX_FIRST]} {student[INDEX_LAST]} ({student[INDEX_BEVERAGE]})"))
+        lst.append(f"{student[INDEX_FIRST]} {student[INDEX_LAST]} ({student[INDEX_BEVERAGE]})")
         pass
 print(lst)
 
