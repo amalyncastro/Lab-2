@@ -85,8 +85,6 @@ for student in all_student_data:
         print(f"{student[INDEX_FIRST]} {student[INDEX_LAST]} ({student[INDEX_YEAR]})")
         pass
 
-
-
 # QUESTION 2 print majors
 """ 
 For each student in the data, 
@@ -121,7 +119,7 @@ for student in all_student_data:
         # print student's name
         print(f"{student[INDEX_FIRST]} {student[INDEX_LAST]}")
         # if the student's cool thing and a thing to make is not empty, print the following lines
-        if student[INDEX_COOL_THING].strip() != "" or student[INDEX_THING_TO_MAKE].strip() != "":
+        if student[INDEX_COOL_THING].strip() != "":
                 print(f"\t{student[INDEX_COOL_THING].strip()}")
                 print(f"\t{student[INDEX_THING_TO_MAKE].strip()}")
         pass
@@ -155,14 +153,13 @@ for student in all_student_data:
 
 for student in all_student_data:
     # setting variables
-    student_has_study_data = student[INDEX_STUDY_TIME] != ""
+    student_has_study_data = student[INDEX_STUDY_TIME]
     firstname = student[INDEX_FIRST]
     lastname = student[INDEX_LAST]
     times = student[INDEX_STUDY_TIME]
-    goodAt = student[INDEX_STUDY_GOOD_AT] != ""
-    helpWith = student[INDEX_STUDY_HELP_WITH] != ""
+    goodAt = student[INDEX_STUDY_GOOD_AT]
+    helpWith = student[INDEX_STUDY_HELP_WITH]
     if student_has_study_data != "" and goodAt != "" and helpWith != "":
-        print("") # make a new line
         print(f"{firstname} {lastname}, {times}") # print student's name when wanted time
         print(f"\t{goodAt}") # tab and print what they're good at
         print(f"\t{helpWith}") # tab what they want help with
