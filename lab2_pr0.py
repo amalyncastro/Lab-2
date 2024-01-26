@@ -82,8 +82,10 @@ for student in all_student_data:
         # You can comment it out when you have a print statement in this loop
         
         # prints student's first name, last name, and year
-        print(f"{student[INDEX_FIRST]} {student[INDEX_LAST] ({student[INDEX_YEAR]})}") 
+        print(f"{student[INDEX_FIRST]} {student[INDEX_LAST]} ({student[INDEX_YEAR]})")
         pass
+
+
 
 # QUESTION 2 print majors
 """ 
@@ -95,7 +97,7 @@ all_student_data: a list-of-lists representing student data
  
 # Print out the student's names, real, and fake majors
 for student in all_student_data:
-        print(f"{student[INDEX_FIRST]} {student[INDEX_LAST]} ({student[INDEX_MAJOR]}): {student[INDEX_IDEAL_MAJOR]}") 
+        print(f"{student[INDEX_FIRST]} {student[INDEX_LAST]} ({student[INDEX_MAJOR]}) {student[INDEX_IDEAL_MAJOR]}") 
         pass
 
 # QUESTION 3 print cool things
@@ -130,12 +132,11 @@ emoji_list = [] # Make a list of all emoji in the class
 
 for student in all_student_data:
         # if the emoji list is not empty, append the student's favorite emoji to emoji_list
-        if emoji_list != "":
+        if student[INDEX_EMOJI_FAV] != "":
                 emoji_list.append(student[INDEX_EMOJI_FAV])
         pass
 # print emoji_list
 print(emoji_list)
-print()
 
 # QUESTION 5 print study partners
 # For each student who wants a study group, print their name and when
@@ -158,9 +159,9 @@ for student in all_student_data:
     firstname = student[INDEX_FIRST]
     lastname = student[INDEX_LAST]
     times = student[INDEX_STUDY_TIME]
-    goodAt = student[INDEX_STUDY_GOOD_AT]
-    helpWith = student[INDEX_STUDY_HELP_WITH]
-    if student_has_study_data:
+    goodAt = student[INDEX_STUDY_GOOD_AT] != ""
+    helpWith = student[INDEX_STUDY_HELP_WITH] != ""
+    if student_has_study_data != "" and goodAt != "" and helpWith != "":
         print("") # make a new line
         print(f"{firstname} {lastname}, {times}") # print student's name when wanted time
         print(f"\t{goodAt}") # tab and print what they're good at
