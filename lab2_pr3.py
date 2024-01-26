@@ -69,13 +69,13 @@ print(counter)
 # or print them out only if a CS major
 
 # debug:
-for student in all_student_data:
-    print(student[INDEX_MAJOR])
+#for student in all_student_data:
+#    print(student[INDEX_MAJOR])
 
 # only if a CS major:
-    for student in all_student_data:
-        if is_CS_major(student[INDEX_MAJOR].lower()):
-           print(student[INDEX_MAJOR])
+#    for student in all_student_data:
+#        if is_CS_major(student[INDEX_MAJOR].lower()):
+#           print(student[INDEX_MAJOR])
 
 ################################################################################################
 # Problem 3 COMPLETE
